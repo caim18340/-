@@ -1,0 +1,356 @@
+{
+	"classify008":{
+	"name" : "小米手机",
+		"list" : [
+			{
+				"id" : "shop01",
+				"ms" : "新品",
+				"name1" : "小米8青春版4GB+64GB",
+				"src" : "sj1.jpg",
+				"price1" : "1399元"
+			},
+			{
+				"id" : "shop02",
+				"ms" : "新品",
+				"name1" : "小米8青春版4GB+64GB",
+				"src" : "sj1.jpg",
+				"price1" : "1399元"
+			},
+			{
+				"id" : "shop03",
+				"ms" : "新品",
+				"name1" : "小米8青春版4GB+64GB",
+				"src" : "sj1.jpg",
+				"price1" : "1399元"
+			},
+			{
+				"id" : "shop04",
+				"ms" : "新品",
+				"name1" : "小米8青春版4GB+64GB",
+				"src" : "sj1.jpg",
+				"price1" : "1399元"
+			},
+			{
+				"id" : "shop05",
+				"ms" : "新品",
+				"name1" : "小米8青春版4GB+64GB",
+				"src" : "sj1.jpg",
+				"price1" : "1399元"
+			}
+		]
+	},
+	"classify009":{
+	"name" : "红米",
+		"list" : [
+			{
+				"id" : "shop06",
+				"ms" : "新品",
+				"name1" : "小米8屏幕指纹版8GB+128GB",
+				"src" : "sj2.jpg",
+				"price1" : "3599元"
+			},
+			{
+				"id" : "shop07",
+				"ms" : "新品",
+				"name1" : "小米8屏幕指纹版8GB+128GB",
+				"src" : "sj2.jpg",
+				"price1" : "3599元"
+			},
+			{
+				"id" : "shop08",
+				"ms" : "新品",
+				"name1" : "小米8屏幕指纹版8GB+128GB",
+				"src" : "sj2.jpg",
+				"price1" : "3599元"
+			},
+			{
+				"id" : "shop10",
+				"ms" : "新品",
+				"name1" : "小米8屏幕指纹版8GB+128GB",
+				"src" : "sj2.jpg",
+				"price1" : "3599元"
+			},
+			{
+				"id" : "shop09",
+				"ms" : "新品",
+				"name1" : "小米8屏幕指纹版8GB+128GB",
+				"src" : "sj2.jpg",
+				"price1" : "3599元"
+			}
+		]
+	},
+	"classify010":{
+	"name" : "红米",
+		"list" : [
+			{
+				"id" : "shop10",
+				"ms" : "低价处理",
+				"name1" : "小米Max 2 4GB+64GB",
+				"src" : "sj6.jpg",
+				"price1" : "1699元"
+			},
+			{
+				"id" : "shop11",
+				"ms" : "低价处理",
+				"name1" : "小米Max 2 4GB+64GB",
+				"src" : "sj6.jpg",
+				"price1" : "1699元"
+			},
+			{
+				"id" : "shop12",
+				"ms" : "低价处理",
+				"name1" : "小米Max 2 4GB+64GB",
+				"src" : "sj6.jpg",
+				"price1" : "1699元"
+			},
+			{
+				"id" : "shop13",
+				"ms" : "低价处理",
+				"name1" : "小米Max 2 4GB+64GB",
+				"src" : "sj6.jpg",
+				"price1" : "1699元"
+			},
+			{
+				"id" : "shop14",
+				"ms" : "低价处理",
+				"name1" : "小米Max 2 4GB+64GB",
+				"src" : "sj6.jpg",
+				"price1" : "1699元"
+			}
+		]
+	},"classify011":{
+	"name" : "小米手机",
+		"list" : [
+			{
+				"id" : "shop15",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop16",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop17",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop18",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop19",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			}
+		]
+	},"classify012":{
+	"name" : "红米",
+		"list" : [
+			{
+				"id" : "shop20",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop21",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop22",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop23",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop24",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			}
+		]
+	},"classify013":{
+	"name" : "小米手机",
+		"list" : [
+			{
+				"id" : "shop25",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop26",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop27",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop28",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop29",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			}
+		]
+	},"classify014":{
+	"name" : "红米",
+		"list" : [
+			{
+				"id" : "shop30",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop31",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop32",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop33",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop34",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			}
+		]
+	},"classify015":{
+	"name" : "小米手机",
+		"list" : [
+			{
+				"id" : "shop35",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop36",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop37",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop38",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			},
+			{
+				"id" : "shop39",
+				"ms" : "享6折",
+				"name1" : "小米MIX2全陶瓷尊享版",
+				"src" : "sj7.jpg",
+				"price1" : "2699元"
+			}
+		]
+	},"classify016":{
+	"name" : "红米",
+		"list" : [
+			{
+				"id" : "shop40",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop41",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop42",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop43",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			},
+			{
+				"id" : "shop44",
+				"ms" : "降价处理",
+				"name1" : "红米S2 3GB+32GB",
+				"src" : "sj8.jpg",
+				"price1" : "999元"
+			}
+		]
+	}
+}

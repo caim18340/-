@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_879194_h6s8xcplux.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<div class="r_main_bg1">
+			<div class="r_main_1">
+				<a href="shouye.html"><img src="img/logo.jpg"/></a>
+				<h3>小米商城</h3>
+				<p>让每个人享受科技的乐趣</p>
+			</div>
+		</div>
+		<div class="r_main_bg2">
+			<div class="r_main_2">
+				<div class="r_main_4">
+					<p>
+						<span class="register">账号注册</span>
+						<i>|</i>
+						<span class="login active1">账号登录</span>
+					</p>
+					<div class="r_main_6">
+						<input type="text" name="" id="dname" placeholder="邮箱/手机号码/小米ID" /><span id="ddname"></span>
+						<input type="password" name="" id="dpwd" placeholder="密码" /><span id="ddpwd"></span>
+						<input class="dl_1" type="text" placeholder="验证码"/>
+						<input disabled="disabled" class="dl_2" type="text" />
+						<i class="dl_3">不清楚换一张</i>
+						<span class="dl_4"></span>
+						<input type="submit" name="" id="dl" value="立即登录" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="r_main_bg3">
+			<div class="r_main_3">
+				<ul>
+					<li><a href="javascript:;">简体</a>|</li>
+					<li><a href="javascript:;">繁体</a>|</li>
+					<li><a href="javascript:;">English</a>|</li>
+					<li><a href="javascript:;">常见问题</a>|</li>
+					<li><a href="javascript:;">隐私政策</a></li>
+				</ul>
+				<div>
+					<p>小米公司版权所有-京ICP备10046444</p>
+					<i class="iconfont">&#xe617;</i>
+					<a href="javascript:;">京公网安备11010802020134号-京ICP证110507号</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/little.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+	(function(){
+		var str = "0123456789abcdefghijklmnopqistuvwxyz";
+		var num = str.substr(rand(5,29),6);
+		$(".dl_2").css("background",getColor())
+		$(".dl_2").val(num);
+		$(".dl_3").click(function(){
+			setTimeout(function(){
+				num = str.substr(rand(5,29),6)
+			},10)
+			$(".dl_2").val(num);
+			$(".dl_2").css("background",getColor())
+		});
+		var off_1 = false;
+		var off_2 = false;
+		var off_3 = false;
+		$("#dname").focus(function(){
+			$(this).css("border","blue solid 1px")
+			$("#ddname").html("手机号码/邮箱/小米ID");
+			$("#ddname").css("color","#000");
+		})
+		$("#dpwd").focus(function(){
+			$(this).css("border","blue solid 1px")
+			$("#ddpwd").html("6-20位字母、数字或者符号的组合");
+			$("#ddpwd").css("color","#000");
+		})
+		$(".dl_1").focus(function(){
+			$(this).css("border","blue solid 1px")
+			$(".dl_4").html("输入验证码");
+			$(".dl_4").css("color","#000");
+		})
+        var url1 = "php/login.php?id=" + Math.random();
+        var url2 = "php/zc.php?id=" + Math.random();
+        $("#dname").blur(function(){
+		var reg= /^\w{6,11}$/; 
+		var uname = $("#dname").val();
+		var data = "&uname="+ uname;
+		if(reg.test(uname)){
+			getAjax(url2,function(res){
+				if(res == 1){
+					$("#ddname").html("用户名不存在");
+					$("#dname").css("border","red solid 1px")
+					$("#ddname").css("color","red");
+					off_1 = false;
+				}else if(res == 0){
+					$("#ddname").html("通过");
+					$("#ddname").css("color","green");
+					off_1 = true;
+				}
+			},data)
+			}else{
+				$("#dname").css("border","red solid 1px")
+				$("#ddname").html("请输入正确的手机号码或邮箱格式");
+				$("#ddname").css("color","red");
+				off_1 = false;
+			}
+			
+		})
+		$("#dpwd").blur(function(){
+			var reg = /^\w{6}$/;
+			var upwd = $("#dpwd").val();
+			if(reg.test(upwd)){
+				$("#ddpwd").html("通过");
+				$("#ddpwd").css("color","green");
+				off_2 = true;
+			}else{
+				$("#dpwd").css("border","red solid 1px")
+				$("#ddpwd").html("密码不符合标准");
+				$("#ddpwd").css("color","red");
+				off_2 = false;
+			}
+		})
+		$(".dl_1").blur(function(){
+			var dl_1 = $(".dl_1").val();
+			var dl_2 = $(".dl_2").val();
+			if(dl_1 == dl_2){
+				$(".dl_4").html("验证码正确");
+				$(".dl_4").css("color","green");
+				off_3 = true;
+			}else{
+				$(".dl_4").html("验证码错误");
+				$(".dl_4").css("color","red");
+				setTimeout(function(){
+					num = str.substr(rand(5,29),6)
+				},10)
+				$(".dl_2").val(num);
+				$(".dl_2").css("background",getColor())
+				off_3 = false;
+			}
+		})
+		$("#dl").click(function(){
+		if(off_1 && off_2 && off_3){
+				var uname = $("#dname").val();
+				var upwd = $("#dpwd").val();
+				var data = "&uname="+ uname + "&upwd=" + upwd;
+				getAjax(url1,function(res){
+					console.log(res)
+					if(res == 1){
+						$('.denglu').html(uname + "用户");
+						$('.zhuce').css(uname + "用户");
+						location.href = "shouye.html";
+					}else if(res == 2){
+						$("#dpwd").css("border","red solid 1px")
+						$("#ddpwd").html("密码错误");
+						$("#ddpwd").css("color","red");
+                        setTimeout(function(){
+                            num = str.substr(rand(5,29),6)
+                        },10)
+                        $(".dl_2").val(num);
+					}
+				},data)
+				
+			}else{
+				alert("输入有误，无法登录，请根据要求完善资料")
+			}
+		})
+	})()
+</script>

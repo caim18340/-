@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+	</head>
+	<body>
+		<div class="r_main_bg1">
+			<div class="r_main_1">
+				<a href="shouye.html"><img src="img/logo.jpg"/></a>
+				<h3>小米商城</h3>
+				<p>让每个人享受科技的乐趣</p>
+			</div>
+		</div>
+		<div class="r_main_bg2">
+			<div class="r_main_2">
+				<div class="r_main_4">
+					<p>
+						<span class="register active1">账号注册</span>
+						<i>|</i>
+						<span class="login">账号登录</span>
+					</p>
+					<div class="r_main_5">
+						<input autocomplete="off" type="text" name="uname" id="uname" placeholder="邮箱/手机号码/小米ID" /><span id="iname"></span>
+						<input type="password" name="upwd" id="upwd" placeholder="密码" /><span id="ipwd"></span>
+						<input type="password" name="uupwd" id="uupwd" placeholder="确认密码" /><span id="iipwd"></span>
+						<input type="text" name="yz" id="yz" placeholder="验证码" /><input disabled="disabled" class="yzm2" type="text" /><span class="yzm"><i>不清楚换一张</i></span>
+						<span id="iyz"></span>
+						<input type="submit" name="zc" id="zc" value="立即注册" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="r_main_bg3">
+			<div class="r_main_3">
+				<ul>
+					<li><a href="javascript:;">简体</a>|</li>
+					<li><a href="javascript:;">繁体</a>|</li>
+					<li><a href="javascript:;">English</a>|</li>
+					<li><a href="javascript:;">常见问题</a>|</li>
+					<li><a href="javascript:;">隐私政策</a></li>
+				</ul>
+				<div>
+					<p>小米公司版权所有-京ICP备10046444</p>
+					<i class="iconfont">&#xe617;</i>
+					<a href="javascript:;">京公网安备11010802020134号-京ICP证110507号</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/public.js"></script>
+<script src="js/little.js"></script>
+<script src="js/ajax.js"></script>
+<script type="text/javascript">
+	(function(){
+        $('.yzm2').val(rand(1000,9999)) ;
+		$('.yzm i').click(function(){
+			$('.yzm2').val(rand(1000,9999));
+		})
+		var off_1 = false;
+		var off_2 = false;
+		var off_3 = false;
+		var off_4 = false;
+		$("#uname").focus(function(){
+			$(this).css("border","blue solid 1px")
+			$("#iname").html("手机号码/邮箱/小米ID");
+			$("#iname").css("color","#000");
+		})
+		$("#upwd").focus(function(){
+			$(this).css("border","blue solid 1px")
+			$("#ipwd").html("6-20位字母、数字或者符号的组合");
+			$("#ipwd").css("color","#000");
+		})
+		$("#uupwd").focus(function(){
+			$(this).css("border","blue solid 1px")
+			$("#iipwd").html("再次输入密码");
+			$("#iipwd").css("color","#000");
+		})
+		$("#yz").focus(function(){
+			$(this).css("border","blue solid 1px")
+			$("#iyz").html("输入验证码");
+			$("#iyz").css("color","#000");
+		})
+        var url2 = "php/register.php?id=" + Math.random();
+        var url1 = "php/zc.php?id=" + Math.random();
+        $("#uname").blur(function(){
+		var reg= /^\w{6,11}$/; 
+		var uname = $("#uname").val();
+		var data = "&uname="+ uname;
+		if(reg.test(uname)){
+			getAjax(url1,function(res){
+				if(res == 1){
+					$("#iname").html("通过");
+					$("#iname").css("color","green");
+					off_1 = true;
+				}else if(res == 0){
+					$("#uname").css("border","red solid 1px")
+					$("#iname").html("用户名已存在");
+					$("#iname").css("color","red");
+					off_1 = false;
+				}
+			},data)
+			}else{
+				$("#uname").css("border","red solid 1px")
+				$("#iname").html("请输入正确的手机号码或邮箱格式");
+				$("#iname").css("color","red");
+				off_1 = false;
+			}
+			
+		})
+		$("#upwd").blur(function(){
+			var reg = /^\w{6}$/;
+			upwd = $("#upwd").val();
+			if(reg.test(upwd)){
+				$("#ipwd").html("通过");
+				$("#ipwd").css("color","green");
+				off_2 = true;
+			}else{
+				$("#upwd").css("border","red solid 1px")
+				$("#ipwd").html("密码不符合标准");
+				$("#ipwd").css("color","red");
+				off_2 = false;
+			}
+		})
+		$("#uupwd").blur(function(){
+		if($("#uupwd").val() == upwd){
+				$("#iipwd").html("通过");
+				$("#iipwd").css("color","green");
+				off_3 = true;
+			}else{
+				$("#uupwd").css("border","red solid 1px")
+				$("#iipwd").html("两次密码不一致，请重新输入");
+				$("#iipwd").css("color","red");
+				off_3 = false;
+			}
+		})
+		$("#yz").blur(function(){
+			var yz = $("#yz").val();
+			var iyz = $(".yzm2").val();
+			if(yz == iyz){
+				$("#iyz").html("验证码正确");
+				$("#iyz").css("color","green");
+				off_4 = true;
+			}else{
+				$("#iyz").html("验证码错误");
+				$("#iyz").css("color","red");
+				$('.yzm2').val(rand(1000,9999))
+				off_4 = false;
+			}
+		})
+		$("#zc").click(function(){
+		if(off_1 && off_2 && off_3 && off_4){
+				var uname = $("#uname").val();
+				var upwd = $("#upwd").val();
+				console.log(uname)
+				console.log(upwd)
+				var data = "&uname="+ uname + "&upwd=" + upwd;
+				$.get(url2,data)
+				location.href = "login.html";
+			}else{
+				alert("输入有误，无法注册，请根据要求完善资料")
+			}
+		})
+	})()
+	
+</script>
