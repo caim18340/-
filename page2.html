@@ -11,7 +11,7 @@
 		<div class="nav_bg">
 				<div class="nav_1">
 					<ul class="nav_2">
-						<li><a href="javascript:;">小米商城</a><span>|</span></li>
+						<li><a class="xiaomisc" href="javascript:;">小米商城</a><span>|</span></li>
 						<li><a href="javascript:;">MIUI</a><span>|</span></li>
 						<li><a href="javascript:;">1oT</a><span>|</span></li>
 						<li><a href="javascript:;">云服务</a><span>|</span></li>
@@ -43,9 +43,12 @@
 						
 					</ul>
 					<ul class="xiaomi_5"></ul>
-					<form action="" method="post">
+					<form action="https://www.mi.com/index.htm" method="post">
 						<input type="text" name="" id="txt_1" value="" />
 						<input type="submit" class="iconfont" value="&#xe63d;"/>
+						<ul class="search" id="search">
+							
+						</ul>
 					</form>
 				</div>
 				<div class="main_9">
@@ -153,8 +156,13 @@
 <script src="js/ajax1.js" ></script>
 <script src="js/ajax2.js" ></script>
 <script src="js/ajax3.js" ></script>
+<script src="js/cookie.js" ></script>
+<script src="js/search.js" ></script>
 <script type="text/javascript">
 	(function(){
+		$(".xiaomisc").click(function(){
+			window.location.href = "shouye.html"
+		})
 		var url = window.location.href;
 		var obj = addres(url);
 		var pid = obj.id;
@@ -176,36 +184,39 @@
 								<div class="main_11">
 									<h3>${cur.name1}</h3>
 									<span>现价:${cur.price1}</span>
-									<button>加入购物车</button>
+									<button classify=${classify} pid=${cur.id} src=${cur.src} price=${cur.price1} name1=${cur.name1} >加入购物车</button>
 								</div>`;
 					}
 				}
 				$(".main_9").html(str)
 			}
 		});
-		$.ajax({
-			type:"get",
-			url:"data3.json",
-			async:true,
-			cache:true,
-			success:function(res){
-				var str = "";
-				var arr = res[classify].list;
+		var arr = [];
+		$(".main_9").on("click","button",function(){
+			var flag = true;
+			var obj = {
+				id : $(this).attr("pid"),
+				name : $(this).attr("name1"),
+				price : $(this).attr("price"),
+				src : $(this).attr("src"),
+				count : 1
+			}
+			var cookieInfor = getCookie("shoplist");
+			if(cookieInfor.length != 0){
+				arr = cookieInfor;
 				for(var i=0;i<arr.length;i++){
-					var cur = arr[i];
-					if(pid == cur.id){
-						str += `<div class="main_10">
-									<img src="img/${cur.src}"/>
-								</div>
-								<div class="main_11">
-									<h3>${cur.name1}</h3>
-									<span>现价:${cur.price1}</span>
-									<button>加入购物车</button>
-								</div>`;
+					if(arr[i].id == obj.id && arr[i].classify == obj.classify){
+						arr[i].count++;
+						flag = false
 					}
 				}
-				$(".main_9").html(str)
 			}
-		});
+			if(flag){
+				arr.push(obj);
+			}
+			setCookie("shoplist",JSON.stringify(arr));
+			console.log(document.cookie)
+			window.location.href = "addShopCar.html";
+		})
 	})()
 </script>

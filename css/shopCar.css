@@ -1,0 +1,185 @@
+*{margin:0;padding:0;}
+li{list-style:none;}
+img{border:none; vertical-align:middle;}
+a{text-decoration:none;color:#b0b0b0;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
+em,i,b{font-style:normal;}
+body{font:12px "微软雅黑";color:#b7b0b0;}
+.left{float:left;}
+.right{float:right;}
+.clearBoth{clear:both;height:0;overflow:hidden;}
+
+
+.main_17{
+	width: 100%;
+	background: #fff;
+	border-bottom: 2px solid #ff6700;
+}
+.main_18{
+	width: 1226px;
+	height: 48px;
+	padding: 26px 0;
+	margin: 0 auto;
+}
+.main_18>img{
+	margin-right: 45px;
+	float: left;
+}
+.main_18>h3{
+	float: left;
+	height: 48px;
+	line-height: 48px;
+	color: #424242;
+	font-size: 28px;
+	margin-right: 15px;
+}
+.main_18>p{
+	float: left;
+	height: 48px;
+	line-height: 55px;
+}
+.main_18>div{
+	float: right;
+	width: 150px;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+}
+.main_18>div>a{
+	display: block;
+	float: left;
+	width: 50px;
+	padding-left: 25px;
+}
+.shopBox{
+	width: 100%;
+	padding-top: 38px;
+	padding-bottom: 66px;
+	background: #f5f5f5;
+}
+.main_19{
+	margin:0 auto;
+	height: 70px;
+	width: 1226px;
+	background: #fff;
+	border-bottom: 1px solid #f5f5f5;
+}
+.main_19>p{
+	height: 70px;
+	line-height: 70px;
+	float: left;
+	color: #424242;
+	font-size: 14px;
+}
+.main_19>p>input{
+	width: 18px;
+	height: 18px;
+	margin: 0px 24px;
+}
+.main_19 p:nth-child(1){
+	padding-right: 145px;
+}
+.main_19 p:nth-child(2){
+	padding-right: 375px;
+}
+.main_19 p:nth-child(3){
+	padding-right: 145px;
+}
+.main_19 p:nth-child(4){
+	padding-right: 150px;
+}
+.main_19 p:nth-child(5){
+	padding-right: 105px;
+}
+.main_20{
+	width: 1226px;
+	margin: 0 auto;
+	height: 500px;
+	overflow-y: scroll;
+	border-bottom: 20px solid #f5f5f5;
+}
+.shoplist{
+	height: 116px;
+	border-bottom: 1px solid #f5f5f5;
+	background: #fff;
+}
+.shoplist>p{
+	height: 116px;
+	line-height: 116px;
+	float: left;
+	color: #424242;
+	font-size: 14px;
+}
+.shoplist>p>img{
+	width: 116px;
+	height: 116px;
+}
+.shoplist>p>input{
+	width: 18px;
+	height: 18px;
+	margin: 0px 24px;
+}
+.shoplist p:nth-child(2){
+	text-align: center;
+	width: 170px;
+}
+.shoplist p:nth-child(3){
+	width: 425px;
+}
+.shoplist p:nth-child(4){
+	width: 130px;
+}
+.shoplist .count{
+	line-height: 48px;
+	display: flex;
+	width: 148px;
+	height: 48px;
+	margin-top: 33px;
+	border: 1px solid #ccc;
+	margin-right: 70px;
+}
+.shoplist .count span{
+	text-align: center;
+	display: block;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+	font-size: 20px;
+}
+.shoplist .allMoney{
+	color: #FF6700;
+	margin-right: 100px;
+}
+.shoplist .delBtn{
+	font-size: 30px;
+	cursor: pointer;
+}
+.shopAll{
+	width: 1226px;
+	margin: 0 auto;
+	height: 50px;
+	background: #fff;
+}
+.shopAll>p{
+	line-height: 50px;
+	height: 50px;
+	float: left;
+	font-size: 15px;
+	color: #424242;
+}
+.shopAll p:nth-child(1){
+	padding-right: 15px;
+	color: #ccc;
+}
+.shopAll p:nth-child(1) a{
+	color: #424242;
+	margin:0 15px ;
+}
+.shopAll span{
+	color: #F56600;
+	margin: 0 10px;
+}
+.shopAll p:nth-child(3){
+	float: right;
+	margin-right: 100px;
+}

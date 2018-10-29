@@ -192,6 +192,7 @@ body{font:12px "微软雅黑";color:#b7b0b0;}
 .main_1>form{
 	float: right;
 	margin-top:25px ;
+	position: relative;
 }
 .main_1>form>#txt_1{
 	width: 233px;
@@ -213,6 +214,24 @@ body{font:12px "微软雅黑";color:#b7b0b0;}
 	color: #616161;
 	font-size: 20px;
 	cursor: pointer;
+}
+.search{
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 243px;
+	border: 1px solid #e0e0e0;
+	border-top: none;
+	z-index: 20;
+	background: #fff;
+}
+.search>li{
+	height: 30px;
+	padding-left: 15px;
+	width: 228px;
+	line-height: 30px;
+	color: #333;
 }
 /* footer */
 .footer_top,.footer_Center,.footer_Bot{

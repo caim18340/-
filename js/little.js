@@ -17,5 +17,5 @@
 	$(".login").click(function(){
 		$(this).addClass("active1")
 		window.location.href = "login.html"
-	})
+	});
 })()

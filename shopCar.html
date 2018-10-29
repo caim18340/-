@@ -2,66 +2,53 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<title></title>
 		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_879194_h6s8xcplux.css"/>
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
-		<link rel="stylesheet" type="text/css" href="css/page1.css"/>
-		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/shopCar.css"/>
 	</head>
 	<body>
-		<div class="nav_bg">
-				<div class="nav_1">
-					<ul class="nav_2">
-						<li><a class="xiaomisc" href="javascript:;">小米商城</a><span>|</span></li>
-						<li><a href="javascript:;">MIUI</a><span>|</span></li>
-						<li><a href="javascript:;">1oT</a><span>|</span></li>
-						<li><a href="javascript:;">云服务</a><span>|</span></li>
-						<li><a href="javascript:;">金融 </a><span>|</span></li>
-						<li><a href="javascript:;">有品</a><span>|</span></li>
-						<li><a href="javascript:;">小爱开放平台</a><span>|</span></li>
-						<li><a href="javascript:;">政企服务</a><span>|</span></li>
-						<li><a href="javascript:;">下载app</a><span>|</span>
-							<p class="xiaomi_1"></p>
-							<div class="xiaomi_2">
-								<img src="img/xiaomi.jpg" alt="" />
-								<span>小米商城APP</span>
-							</div>
-						</li>
-						<li><a href="javascript:;">Select Region</a></li>
-					</ul>
-					<ul class="nav_3">
-						<li><a href="javascript:;">登录</a><span>|</span></li>
-						<li><a href="javascript:;">注册</a><span>|</span></li>
-						<li><a href="javascript:;">消息通知</a></li>
-						<p class="shopBtn iconfont"><i class="iconfont">&#xe664;</i> 购物车<b>（0）</b></p>
-					</ul>
-				</div>
-			</div>
-			<div class="main_bg1">
-				<div class="main_1">
-					<a class="main_img1" href=""><img src="img/logo.jpg"/></a>
-					<ul class="nav_4">
-						
-					</ul>
-					<ul class="xiaomi_5"></ul>
-					<form action="https://www.mi.com/index.htm" method="post">
-						<input type="text" name="" id="txt_1" value="" />
-						<input type="submit" class="iconfont" value="&#xe63d;"/>
-						<ul class="search" id="search">
-							
-						</ul>
-					</form>
-				</div>
-				<div class="main_9">
-					<!--<div class="main_10">
-						<img src="img/dp4.jpg"/>
+				<div class="main_17">
+					<div class="main_18">
+						<img class="xiaomisc" src="img/logo.jpg" alt="" />
+						<h3>我的购物车</h3>
+						<p>温馨提示:产品是否购买成功,以最终下单为准哦,请尽快结算</p>
+						<div>
+							<a href="javascript:;">账户</a>
+							<a href="javascript:;">我的订单</a>
+						</div>
 					</div>
-					<div class="main_11">
-						<p>小米小钢炮蓝牙音箱 2 白色极简设计,专业喇叭</p>
-						<span>13元</span>
-						<button>加入购物车</button>
-					</div>-->
 				</div>
-				
+				<div class="shopBox">
+					<div class="main_19">
+						<p><input class="ckAll" type="checkbox" />全选</p>
+						<p>商品名称</p>
+						<p>单价</p>
+						<p>数量</p>
+						<p>小计</p>
+						<p>操作</p>
+					</div>
+					<div class="main_20">
+						<!--<div class="shoplist">
+							<p><input type="checkbox" /></p>
+							<p><img src="img/sj3.jpg"/></p>
+							<p >小米8青春版4GB+64GB</p>
+							<p class="omeMoney">1660元</p>
+							<p class="count" data-id="shop01" data-classify="classify12" data-count="1" data-price="1444元 " data-name="小米" data-src="79.jpg">
+								<span class="shopUpdate" data-number="-1">-</span>
+								<span class="shopCount">5</span>
+								<span class="shopUpdate" data-number="1">+</span>
+							</p>
+							<p class="allMoney">2966元</p>
+							<p class="delBtn">×</p>
+						</div>-->
+					</div>
+					<div class="shopAll">
+						<p><a href="shouye.html">继续购物</a>|</p>
+						<p>共<span class="allCount">0</span>件商品</p>
+						<p>合计:<span class="shopAllMoney">0</span>元</p>
+					</div>
+				</div>
 				<!-- footer -->
 <ul class="footer_top">
 	 <li><a class="iconfont" href="#">&#xe629;预约维修服务</a></li>
@@ -156,69 +143,81 @@
 <script src="js/ajax1.js" ></script>
 <script src="js/ajax2.js" ></script>
 <script src="js/ajax3.js" ></script>
-<script src="js/cookie.js" ></script>
-<script src="js/search.js" ></script>
+<script src="js/cookie.js"></script>
 <script type="text/javascript">
 	(function(){
 		$(".xiaomisc").click(function(){
 			window.location.href = "shouye.html"
 		})
-		var url = window.location.href;
-		var obj = addres(url);
-		var pid = obj.id;
-		var classify = obj.classify;
-		$.ajax({
-			type:"get",
-			url:"data1.json",
-			async:true,
-			cache:true,
-			success:function(res){
-				var str = "";
-				var arr = res[classify].list;
-				for(var i=0;i<arr.length;i++){
-					var cur = arr[i];
-					if(pid == cur.id){
-						str += `<div class="main_10">
-									<img src="img/${cur.src}"/>
-								</div>
-								<div class="main_11">
-									<h3>${cur.name1}(${cur.name2})</h3>
-									<p>${cur.hp}</p>
-									<p>${cur.lz}</p>
-									<span>现价:${cur.price}</span>
-									<button classify=${classify} pid=${cur.id} src=${cur.src} price=${cur.price} name1=${cur.name1} >加入购物车</button>
-								</div>`;
+		var arr = getCookie("shoplist");
+		var str = "";
+		for(var i=0;i<arr.length;i++){
+			var cur = arr[i];
+			str += `<div class="shoplist">
+						<p><input class="ck" type="checkbox" /></p>
+						<p><img src="img/${cur.src}"/></p>
+						<p >${cur.name}</p>
+						<p class="omeMoney">${cur.price}</p>
+						<p class="count" data-id="${cur.id}" data-classify="${cur.classify}" data-count="${cur.count}" data-price="${cur.price} " data-name="${cur.name}" data-src="${cur.src}">
+							<span class="shopUpdate" data-number="-1">-</span>
+							<span class="shopCount">${cur.count}</span>
+							<span class="shopUpdate" data-number="1">+</span>
+						</p>
+						<p class="allMoney">${cur.count * cur.price}</p>
+						<p class="delBtn">×</p>
+					</div>`
+		}
+		$(".main_20").html(str);
+		$(".delBtn").click(function(){
+			var pid = $(this).parent().find(".count").data("id");
+			var pname = $(this).parent().find(".count").data("name");
+			for(var i=0;i<arr.length;i++){
+				if(pid == arr[i].id &&  pname == arr[i].name){
+					arr.splice(i,1);
+					setCookie("shoplist",JSON.stringify(arr));
+					var flag = $(this).parent().remove();
+					if(flag){
+						confirm("你确定要从购物车中删除此宝贝");
 					}
-				}
-				$(".main_9").html(str)
-			}
-		});
-		var arr = [];
-		$(".main_9").on("click","button",function(){
-			var flag = true;
-			var obj = {
-				id : $(this).attr("pid"),
-				name : $(this).attr("name1"),
-				price : $(this).attr("price"),
-				src : $(this).attr("src"),
-				count : 1
-			}
-			var cookieInfor = getCookie("shoplist");
-			if(cookieInfor.length != 0){
-				arr = cookieInfor;
-				for(var i=0;i<arr.length;i++){
-					if(arr[i].id == obj.id && arr[i].classify == obj.classify){
-						arr[i].count++;
-						flag = false
-					}
+					result();
 				}
 			}
-			if(flag){
-				arr.push(obj);
+		})
+		$(".shopUpdate").click(function(){
+			var pid = $(this).parents(".shoplist").find(".count").data("id");
+			console.log(pid)
+			var pname = $(this).parents(".shoplist").find(".count").data("name");
+			var span = $(this).data("number");
+			var count = $(this).parent().find(".shopCount").html();
+			if(span == -1 && count == 1){
+				return;
 			}
-			setCookie("shoplist",JSON.stringify(arr));
-			console.log(document.cookie)
-			window.location.href = "addShopCar.html";
+			for(var i=0;i<arr.length;i++){
+				if(pid == arr[i].id &&  pname == arr[i].name){
+					arr[i].count += span;
+					setCookie("shoplist",JSON.stringify(arr));
+					$(this).parent().find(".shopCount").html(arr[i].count);
+					$(this).parent().next().html(arr[i].count * arr[i].price + '元');
+					result();
+				}
+			}
+		})
+		function result(){
+			var count = 0;
+			var money = 0;
+			$(".ck:checked").each(function(index,item){
+				count += parseInt($(item).parents(".shoplist").find(".shopCount").html());
+				money += parseFloat($(item).parents(".shoplist").find(".allMoney").html())
+			})
+			$(".allCount").html(count);
+			$(".shopAllMoney").html(money);
+		}
+		$(".ck").click(function(){
+			result()
+		})
+		$(".ckAll").click(function(){
+			$(".ck").prop("checked",$(this).prop("checked"));
+			result()
 		})
 	})()
 </script>

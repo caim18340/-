@@ -169,7 +169,7 @@
 		var classify = obj.classify;
 		$.ajax({
 			type:"get",
-			url:"data1.json",
+			url:"data3.json",
 			async:true,
 			cache:true,
 			success:function(res){
@@ -182,11 +182,9 @@
 									<img src="img/${cur.src}"/>
 								</div>
 								<div class="main_11">
-									<h3>${cur.name1}(${cur.name2})</h3>
-									<p>${cur.hp}</p>
-									<p>${cur.lz}</p>
-									<span>现价:${cur.price}</span>
-									<button classify=${classify} pid=${cur.id} src=${cur.src} price=${cur.price} name1=${cur.name1} >加入购物车</button>
+									<h3>${cur.name1}</h3>
+									<span>现价:${cur.price1}</span>
+									<button classify=${classify} pid=${cur.id} src=${cur.src} price=${cur.price1} name1=${cur.name1} >加入购物车</button>
 								</div>`;
 					}
 				}

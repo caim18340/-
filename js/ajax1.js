@@ -50,7 +50,14 @@
 							</a>
 						</li>`
 			}
-			$(".list_3").html(str)
+			$(".list_3").html(str);
+			$(".list_3 li").hover(function(){
+				$(this).addClass("shadow").siblings().removeClass("shadow");
+				$(this).stop().animate({bottom : 10}).siblings().stop().animate({bottom : 0});
+			},function(){
+				$(this).removeClass("shadow");
+				$(this).stop().animate({bottom : 0});
+			})
 		}
 	});
 	$.ajax({
@@ -76,7 +83,7 @@
 			
 		}
 	});
-	var index = 0;
+			var index = 0;
 			var timer = null;
 			timer = setInterval(autoPlay,1000);
 			function autoPlay(){

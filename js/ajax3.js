@@ -44,7 +44,7 @@
 		success : function(res){
 			var title = "";
 			for(var key in res){
-				title += `<li classify=${key}><a href="javascript:;">${res[key].name}</a>`;
+				title += `<li classify=${key}><a href="javascript:;">${res[key].name}</a><i class="iconfont">&#xe646;</i></li>`;
 			}
 			$(".list_7").html(title);
 			$(".list_7 li").mouseenter(function(){
@@ -54,7 +54,7 @@
 				var str = "";
 				for(var i=0;i<arr.length;i++){
 					var cur = arr[i];
-					str += `<li><a href="page2.html?id=${cur.id}&classify=${classify}"><img src="img/${cur.src}" alt="" />${cur.name1}</a></li>`;
+					str += `<li><a href="page3.html?id=${cur.id}&classify=${classify}"><img src="img/${cur.src}" alt="" />${cur.name1}</a></li>`;
 				}
 				$(".dots_7").html(str);
 			})
