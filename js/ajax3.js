@@ -10,7 +10,7 @@
 				title += `<li classify=${key}><a href="javascript:;">${res[key].name}</a>`;
 			}
 			$(".nav_4").html(title);
-			$(".nav_4 li").mouseenter(function(){
+			$(".nav_4 li").mouseover(function(){
 				$(this).parent().next().slideDown(1000);
 				$(this).parent().next().addClass("shadow")
 				var classify = $(this).attr("classify");

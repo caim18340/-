@@ -14,21 +14,50 @@ body{font:12px "微软雅黑";color:#b7b0b0;}
 	width: 1226px;
 	height: 400px;
 	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
 }
 .main_10{
-	width: 300px;
-	height: 300px;
+	margin-top: 50px;
+	width: 200px;
+	height: 200px;
+	position: relative;
 	border: 2px solid #ccc;
+	float: left;
 }
-.main_10 img{
+.main_10>img{
 	display: block;
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height : 200px;
+}
+.main_10>.mask{
+	width: 100px;
+	height: 100px;
+	background: #FF0000;
+	opacity: .3;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	cursor: move;
+}
+.main_25{
+	float: left;
+	margin: 50px 0 0 50px;
+	width: 350px;
+	height: 350px;
+	border: 2px solid #ccc;
+	overflow: hidden;
+	position: relative;
+	display: none;
+}
+.main_25>img{
+	width: 700px;
+	height: 700px;
+	position: absolute;
+	top: 0;left: 0;
 }
 .main_11{
+	margin-top: 50px;
+	float: right;
 	width: 500px;
 	height: 300px;
 	display: flex;

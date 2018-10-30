@@ -58,14 +58,20 @@
 <script src="js/public.js"></script>
 <script type="text/javascript">
 	(function(){
-		var str = "0123456789abcdefghijklmnopqistuvwxyz";
-		var num = str.substr(rand(5,29),6);
+		var str = "z0a2vbc9defong3tyh5ijkm1lup6q4xi7s8w";
+		var num = "";
+		for(var i=0;i<6;i++){
+			num += str.substr(rand(0,35),1);
+		}
 		$(".dl_2").css("background",getColor())
 		$(".dl_2").val(num);
 		$(".dl_3").click(function(){
 			setTimeout(function(){
-				num = str.substr(rand(5,29),6)
-			},10)
+				num = "";
+				for(var i=0;i<6;i++){
+					num += str.substr(rand(0,35),1);
+				}
+			},100)
 			$(".dl_2").val(num);
 			$(".dl_2").css("background",getColor())
 		});
@@ -74,12 +80,12 @@
 		var off_3 = false;
 		$("#dname").focus(function(){
 			$(this).css("border","blue solid 1px")
-			$("#ddname").html("手机号码/邮箱/小米ID");
+			$("#ddname").html("6-11位字母/数字/下划线/或者组合");
 			$("#ddname").css("color","#000");
 		})
 		$("#dpwd").focus(function(){
 			$(this).css("border","blue solid 1px")
-			$("#ddpwd").html("6-20位字母、数字或者符号的组合");
+			$("#ddpwd").html("6位字母/数字/下划线/或者组合");
 			$("#ddpwd").css("color","#000");
 		})
 		$(".dl_1").focus(function(){
@@ -108,7 +114,7 @@
 			},data)
 			}else{
 				$("#dname").css("border","red solid 1px")
-				$("#ddname").html("请输入正确的手机号码或邮箱格式");
+				$("#ddname").html("请输入正确格式");
 				$("#ddname").css("color","red");
 				off_1 = false;
 			}
@@ -139,8 +145,11 @@
 				$(".dl_4").html("验证码错误");
 				$(".dl_4").css("color","red");
 				setTimeout(function(){
-					num = str.substr(rand(5,29),6)
-				},10)
+					num = "";
+					for(var i=0;i<6;i++){
+						num += str.substr(rand(0,35),1);
+					}
+				},100)
 				$(".dl_2").val(num);
 				$(".dl_2").css("background",getColor())
 				off_3 = false;
@@ -162,8 +171,11 @@
 						$("#ddpwd").html("密码错误");
 						$("#ddpwd").css("color","red");
                         setTimeout(function(){
-                            num = str.substr(rand(5,29),6)
-                        },10)
+                            num = "";
+							for(var i=0;i<6;i++){
+								num += str.substr(rand(0,35),1);
+							}
+                        },100)
                         $(".dl_2").val(num);
 					}
 				},data)

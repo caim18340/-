@@ -80,7 +80,7 @@
 		]
 	},
 	"classify010":{
-	"name" : "红米",
+	"name" : "电视",
 		"list" : [
 			{
 				"id" : "shop10",
@@ -119,7 +119,7 @@
 			}
 		]
 	},"classify011":{
-	"name" : "小米手机",
+	"name" : "笔记本",
 		"list" : [
 			{
 				"id" : "shop15",
@@ -158,7 +158,7 @@
 			}
 		]
 	},"classify012":{
-	"name" : "红米",
+	"name" : "空调",
 		"list" : [
 			{
 				"id" : "shop20",
@@ -197,7 +197,7 @@
 			}
 		]
 	},"classify013":{
-	"name" : "小米手机",
+	"name" : "新品",
 		"list" : [
 			{
 				"id" : "shop25",
@@ -236,7 +236,7 @@
 			}
 		]
 	},"classify014":{
-	"name" : "红米",
+	"name" : "路由器",
 		"list" : [
 			{
 				"id" : "shop30",
@@ -275,7 +275,7 @@
 			}
 		]
 	},"classify015":{
-	"name" : "小米手机",
+	"name" : "智能硬件",
 		"list" : [
 			{
 				"id" : "shop35",
@@ -314,7 +314,7 @@
 			}
 		]
 	},"classify016":{
-	"name" : "红米",
+	"name" : "服务",
 		"list" : [
 			{
 				"id" : "shop40",

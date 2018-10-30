@@ -67,12 +67,12 @@
 		var off_4 = false;
 		$("#uname").focus(function(){
 			$(this).css("border","blue solid 1px")
-			$("#iname").html("手机号码/邮箱/小米ID");
+			$("#iname").html("6-11位字母/数字/下划线/或者组合");
 			$("#iname").css("color","#000");
 		})
 		$("#upwd").focus(function(){
 			$(this).css("border","blue solid 1px")
-			$("#ipwd").html("6-20位字母、数字或者符号的组合");
+			$("#ipwd").html("6位字母/数字/下划线/或者组合");
 			$("#ipwd").css("color","#000");
 		})
 		$("#uupwd").focus(function(){
@@ -106,7 +106,7 @@
 			},data)
 			}else{
 				$("#uname").css("border","red solid 1px")
-				$("#iname").html("请输入正确的手机号码或邮箱格式");
+				$("#iname").html("请输入正确格式");
 				$("#iname").css("color","red");
 				off_1 = false;
 			}

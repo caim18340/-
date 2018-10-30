@@ -32,7 +32,21 @@
 						<li><a class="denglu" href="login.html">登录</a><span>|</span></li>
 						<li><a class="zhuce" href="register.html">注册</a><span>|</span></li>
 						<li><a href="javascript:;">消息通知</a></li>
-						<p class="shopBtn iconfont"><i class="iconfont">&#xe664;</i> 购物车<b>（0）</b></p>
+						<p class="shopBtn iconfont"><i class="iconfont">&#xe664;</i> 购物车（<b class="allCount">0</b>）</p>
+						<div class="main_22">
+							<ul class="main_23">
+								<!--<li>
+									<img src="img/sj6.jpg" alt="" />
+									<h6>小米6青春版</h6>
+									<i>1888</i><span>元  × </span><em>3</em>
+								</li>-->
+							</ul>
+							<div>
+								<h3>共<span class="allCount">0</span>件商品</h3>
+								<p><span class="allMoney">0</span>元</p>
+								<a href="shopCar.html">去购物车结算</a>
+							</div>
+						</div>
 					</ul>
 				</div>
 			</div>
@@ -63,8 +77,8 @@
 							</div>
 						</div>
 						<div class="main_15">
-							<div>返回上一级</div>
-							<div>去购物车结算</div>
+							<div class="xiaomisc">返回上一级</div>
+							<div class="shopCar">去购物车结算</div>
 						</div>
 					</div>
 				</div>
@@ -164,6 +178,7 @@
 <script src="js/ajax3.js" ></script>
 <script src="js/search.js"></script>
 <script src="js/cookie.js" ></script>
+<script src="js/shopCar.js"></script>
 <script type="text/javascript">
 	(function(){
 		$(".xiaomisc").click(function(){
@@ -173,10 +188,10 @@
 		var num = arr.length - 1;
 		var str = `<p>${arr[num].name}</p>`;
 		$(".main_16").html(str);
-		$(".main_15").eq(0).click(function(){
+		$(".xiaomisc").click(function(){
 			window.location.href = "shouye.html"
 		})
-		$(".main_15").eq(1).click(function(){
+		$(".shopCar").click(function(){
 			window.location.href = "shopCar.html"
 		})
 	})()

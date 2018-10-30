@@ -78,6 +78,7 @@ body{font:12px "微软雅黑";color:#b7b0b0;}
 .nav_3{
 	float: right;
 	width: 300px;
+	position: relative;
 }
 .nav_3>li{
 	float: left;
@@ -99,6 +100,75 @@ body{font:12px "微软雅黑";color:#b7b0b0;}
 .shopBtn:hover{
 	background: #fff;
 	color: orange;
+}
+.main_22{
+	width: 300px;
+	position: absolute;
+	top: 40px;
+	background: #fff;
+	right: 0;
+	z-index: 25;
+	box-shadow: 0 3px 5px #ccc;
+	display: none;
+}
+.main_23{
+	padding: 10px 20px 0 20px;
+	height: 180px;
+	overflow-y: scroll;
+}
+.main_23>li{
+	height: 80px;
+	width: 260px;
+	border-bottom: 1px solid #ccc;
+}
+.main_23>li>img{
+	margin: 10px 5px 0 0 ;
+	height: 60px;
+	width: 60px;
+	float: left;
+}
+.main_23>li>h6{
+	float: left;
+	height: 80px;
+	width: 100px;
+	line-height: 40px;
+	font-size: 13px;
+	color: #424242;
+}
+.main_23>li>i,.main_23>li>span,.main_23>li>em{
+	margin: 20px 5px 0;
+	float: left;
+}
+.main_22>div{
+	padding: 15px;
+	height: 60px;
+	width: 270px;
+	background: #fafafa;
+	position: relative;
+}
+.main_22>div>h3{
+	height: 20px;
+	line-height: 20px;
+	color: #424242;
+	font-size: 15px;
+}
+.main_22>div>p{
+	height: 40px;
+	line-height: 40px;
+	color: #F56600;
+	font-size: 25px;
+}
+.main_22>div>a{
+	position: absolute;
+	right: 15px;
+	width: 120px;
+	top: 25px;
+	height: 40px;
+	text-align: center;
+	background: #F56600;
+	line-height: 40px;
+	color: #fff;
+	font-size: 15px;
 }
 .main_bg1{
 	width: 100%;

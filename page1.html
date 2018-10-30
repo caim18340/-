@@ -32,7 +32,21 @@
 						<li><a href="javascript:;">登录</a><span>|</span></li>
 						<li><a href="javascript:;">注册</a><span>|</span></li>
 						<li><a href="javascript:;">消息通知</a></li>
-						<p class="shopBtn iconfont"><i class="iconfont">&#xe664;</i> 购物车<b>（0）</b></p>
+						<p class="shopBtn iconfont"><i class="iconfont">&#xe664;</i> 购物车（<b class="allCount">0</b>）</p>
+						<div class="main_22">
+							<ul class="main_23">
+								<!--<li>
+									<img src="img/sj6.jpg" alt="" />
+									<h6>小米6青春版</h6>
+									<i>1888</i><span>元  × </span><em>3</em>
+								</li>-->
+							</ul>
+							<div>
+								<h3>共<span class="allCount">0</span>件商品</h3>
+								<p><span class="allMoney">0</span>元</p>
+								<a href="shopCar.html">去购物车结算</a>
+							</div>
+						</div>
 					</ul>
 				</div>
 			</div>
@@ -158,6 +172,7 @@
 <script src="js/ajax3.js" ></script>
 <script src="js/cookie.js" ></script>
 <script src="js/search.js" ></script>
+<script src="js/shopCar.js"></script>
 <script type="text/javascript">
 	(function(){
 		$(".xiaomisc").click(function(){
@@ -178,8 +193,12 @@
 				for(var i=0;i<arr.length;i++){
 					var cur = arr[i];
 					if(pid == cur.id){
-						str += `<div class="main_10">
+						str += `<div class="main_10" id="small">
 									<img src="img/${cur.src}"/>
+									<div class="mask" id="mask"></div>
+								</div>
+								<div class="main_25" id="big">
+									<img src="img/${cur.src}" id="bigImg"/>
 								</div>
 								<div class="main_11">
 									<h3>${cur.name1}(${cur.name2})</h3>
@@ -190,7 +209,34 @@
 								</div>`;
 					}
 				}
-				$(".main_9").html(str)
+				$(".main_9").html(str);
+				$(".main_10").hover(function(){
+					$(".mask").css("display","block");
+					$(".main_25").css("display","block");
+				},function(){
+					$(".mask").css("display","none");
+					$(".main_25").css("display","none");
+				})
+				var mask = $id("mask");
+				var box= $id("small");
+				var big = $id("big");
+				var bigImg = $id("bigImg");
+				mask.onmousemove = function(e){
+					var e = e || event;
+					var x = e.pageX - box.offsetLeft - mask.offsetWidth / 2;
+					var y = e.pageY - box.offsetTop - mask.offsetHeight / 2;
+					var maxL = box.offsetWidth - mask.offsetWidth -4;
+					var maxT = box.offsetHeight - mask.offsetHeight -4;
+					x = x < 0 ? 0 : x > maxL ? maxL : x;
+					y = y < 0 ? 0 : y > maxT ? maxT : y;
+					mask.style.left = x + 'px';
+					mask.style.top = y + 'px';
+					
+					var bigL = x*(bigImg.offsetWidth - big.offsetWidth) / maxL;
+					var bigT = y*(bigImg.offsetHeight - big.offsetHeight) / maxT;
+					bigImg.style.left = - bigL + 'px';
+					bigImg.style.top = - bigT + 'px';
+				}
 			}
 		});
 		var arr = [];

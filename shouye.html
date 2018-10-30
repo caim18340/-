@@ -46,7 +46,21 @@
 						<li><a class="denglu" href="login.html">登录</a><span>|</span></li>
 						<li><a class="zhuce" href="register.html">注册</a><span>|</span></li>
 						<li><a href="javascript:;">消息通知</a></li>
-						<p class="shopBtn iconfont"><i class="iconfont">&#xe664;</i> 购物车<b>（0）</b></p>
+						<p class="shopBtn iconfont"><i class="iconfont">&#xe664;</i> 购物车（<b class="allCount">0</b>）</p>
+						<div class="main_22">
+								<ul class="main_23">
+									<!--<li>
+										<img src="img/sj6.jpg" alt="" />
+										<h6>小米6青春版</h6>
+										<i>1888</i><span>元  × </span><em>3</em>
+									</li>-->
+								</ul>
+								<div>
+									<h3>共<span class="allCount">0</span>件商品</h3>
+									<p><span class="allMoney">0</span>元</p>
+									<a href="shopCar.html">去购物车结算</a>
+								</div>
+							</div>
 					</ul>
 				</div>
 			</div>
@@ -356,6 +370,44 @@
 <script src="js/ajax1.js" ></script>
 <script src="js/ajax2.js" ></script>
 <script src="js/ajax3.js" ></script>
+<script src="js/cookie.js"></script>
 <script src="js/time.js" ></script>
 <script src="js/little.js" ></script>
 <script src="js/search.js"></script>
+<script src="js/shopCar.js"></script>
+<script type="text/javascript">
+	/*(function(){
+		$(".shopBtn").hover(function(){
+			$(".main_22").css("opacity","1")
+		},function(){
+			$(".main_22").css("opacity","0")
+		})
+		$(".main_22").hover(function(){
+			$(".main_22").css("opacity","1")
+		},function(){
+			$(".main_22").css("opacity","0")
+		})
+		$(".xiaomisc").click(function(){
+			window.location.href = "shouye.html"
+		})
+		var arr = getCookie("shoplist");
+		var str = "";
+		for(var i=0;i<arr.length;i++){
+			var cur = arr[i];
+			str += `<li>
+							<img src="img/${cur.src}" alt="" />
+							<h6>${cur.name}</h6>
+							<i>${cur.price}</i><span>元  × </span><em>${cur.count}</em>
+						</li>`;
+		}
+		$(".main_23").html(str);
+		var count = 0;
+		var money = 0;
+		$(".main_23 li").each(function(index,item){
+			count += parseInt($(item).find("em").html());
+			money += parseFloat($(item).find("em").html() * $(item).find("i").html())
+		})
+		$(".allCount").html(count);
+		$(".allMoney").html(money);
+	})()*/
+</script>
