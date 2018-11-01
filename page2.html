@@ -262,7 +262,7 @@
 			}
 			setCookie("shoplist",JSON.stringify(arr));
 			console.log(document.cookie)
-			window.location.href = "addShopCar.html";
+			window.location.href = `addShopCar.html?id=${obj.id}&src=${obj.src}`;
 		})
 	})()
 </script>

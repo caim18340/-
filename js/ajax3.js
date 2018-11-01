@@ -23,7 +23,7 @@
 									<i>${cur.ms}</i>
 									<img src="img/${cur.src}"/>
 									<p>${cur.name1}</p>
-									<span>${cur.price1}</span>
+									<span>${cur.price1}元</span>
 								</a>
 							</li>`;
 				}

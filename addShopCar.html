@@ -184,9 +184,18 @@
 		$(".xiaomisc").click(function(){
 			window.location.href = "shouye.html"
 		})
+		var url = window.location.href;
+		var obj = addres(url);
+		var pid = obj.id;
+		var src = obj.src;
 		var arr = getCookie("shoplist");
-		var num = arr.length - 1;
-		var str = `<p>${arr[num].name}</p>`;
+		var str = "";
+		for(var i=0;i<arr.length;i++){
+			var cur = arr[i];
+			if(pid == cur.id && src == cur.src){
+				str += `<p>${cur.name}</p>`
+			}
+		}
 		$(".main_16").html(str);
 		$(".xiaomisc").click(function(){
 			window.location.href = "shouye.html"

@@ -15,7 +15,7 @@
 								<a href="page1.html?id=${cur.id}&classify=${key}">
 									<img src="img/${cur.src}" alt="" />
 									<h6>${cur.name1}</h6>
-									<p>${cur.price}</p>
+									<p>${cur.price}元</p>
 									<span>${cur.name2}</span>
 									<div><i>${cur.hp}</i><em>${cur.lz}</em></div>
 								</a>
@@ -36,7 +36,7 @@
 								<a href="page1.html?id=${cur1.id}&classify=${classify}">
 									<img src="img/${cur1.src}" alt="" />
 									<h6>${cur1.name1}</h6>
-									<p>${cur1.price}</p>
+									<p>${cur1.price}元</p>
 									<span>${cur1.name2}</span>
 									<div><i>${cur1.hp}</i><em>${cur1.lz}</em></div>
 								</a>

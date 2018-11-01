@@ -15,7 +15,7 @@
 									<img src="img/${cur.src}" alt="" />
 									<h6>${cur.name1}</h6>
 									<p>${cur.name2}</p>
-									<span>${cur.price1}<del>${cur.price2}</del></span>
+									<span>${cur.price1}元<del>${cur.price2}元</del></span>
 								</a>
 							</li>`;
 				}
@@ -46,7 +46,7 @@
 								<img src="img/${cur.src}" alt="" />
 								<h6>${cur.name1}</h6>
 								<p>${cur.name2}</p>
-								<span>${cur.price1}<del>${cur.price2}</del></span>
+								<span>${cur.price1}元<del>${cur.price2}元</del></span>
 							</a>
 						</li>`
 			}
@@ -74,13 +74,12 @@
 								<i>${cur.ms}</i>
 								<h6>${cur.name1}</h6>
 								<p>${cur.name2}</p>
-								<em>${cur.price1}</em>
+								<em>${cur.price1}元</em>
 								<img src="img/${cur.src}" alt="" />
 							</a>
 						</li>`
 			}
 			$(".list_5").html(str);
-			
 		}
 	});
 			var index = 0;

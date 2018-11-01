@@ -40,13 +40,6 @@ function promiseAjax(url,data){
 	});
 	return pro;	//resolved
 }
-/*var res = promiseAjax("data.json");
-res.then(function(msg){
-	console.log(msg)
-},function(msg){
-	console.log(msg)
-})
-*/
 
 
 

@@ -165,7 +165,7 @@
 					if(res == 1){
 						$('.denglu').html(uname + "用户");
 						$('.zhuce').css(uname + "用户");
-						location.href = "shouye.html";
+						location.href = `shouye.html?id=${uname}`;
 					}else if(res == 2){
 						$("#dpwd").css("border","red solid 1px")
 						$("#ddpwd").html("密码错误");
