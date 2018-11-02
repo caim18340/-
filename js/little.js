@@ -1,6 +1,9 @@
 (function(){
+	var picT = $id("aside").offsetTop;
 	window.onscroll = function(){
 		var stop = document.documentElement.scrollTop || document.body.scrollTop;
+		var dis = picT + stop;
+		move($id("aside"),{top : dis});
 		if(stop > 2000){
 			$(".little").css("display","block")
 		}else if(stop == 0){

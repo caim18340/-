@@ -21,13 +21,32 @@
 				}
 			$(".list_2").html(str);
 			$(".list_2 li").css("border-top","1px solid " + getColor());
-			$(".dots_33").click(function(){
-				$(".list_2").animate({left:234},1000);
+			var index = 0;
+			var timer = setInterval(fn,1000)
+				function fn(){
+					index < 1 ? index++ : index--;
+					$(".list_2").animate({left:-index*992});
+				}
+			$(".dots_33").hover(function(){
+				clearInterval(timer);
+				$(".list_2").animate({left:0},500);
 				$(this).css("color","#333")
+			},function(){
+				timer = setInterval(fn,1000)
+				$(this).css("color","#b7b0b0")
 			});
-			$(".dots_44").click(function(){
-				$(".list_2").animate({left:-758},1000)
+			$(".dots_44").hover(function(){
+				clearInterval(timer);
+				$(".list_2").animate({left:-992},500)
 				$(this).css("color","#333")
+			},function(){
+				timer = setInterval(fn,1000)
+				$(this).css("color","#b7b0b0")
+			})
+			$(".list_22").hover(function(){
+				clearInterval(timer);
+			},function(){
+				timer = setInterval(fn,1000)
 			})
 		}
 	});

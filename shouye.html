@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="css/shouye.css"/>
 	</head>
 	<body>
+		<img src="img/aside.jpg" alt="" id="aside"/>
 		<ul class="main_7">
 			<li class="iconfont"><a href="javascript:;">&#xe993;<i>手机APP</i></a>
 				<p class="xiaomi_3"></p>
@@ -144,17 +145,20 @@
 							<span id="second"></span>
 						</p>
 					</div>
-					<ul class="list_2">
+					<div class="list_22">
+						<ul class="list_2">
 						<!--<li>
-							<a href="javascript:;">
-								<i>立减100</i>
-								<img src="img/s1.jpg" alt="" />
-								<h6>最生活毛巾·Air( 10条装)白色</h6>
-								<p>超值家庭装轻柔速干</p>
-								<span>69元<del>169元</del></span>
-							</a>
-						</li>-->
-					</ul>
+								<a href="javascript:;">
+									<i>立减100</i>
+									<img src="img/s1.jpg" alt="" />
+									<h6>最生活毛巾·Air( 10条装)白色</h6>
+									<p>超值家庭装轻柔速干</p>
+									<span>69元<del>169元</del></span>
+								</a>
+							</li>-->
+						</ul>
+					</div>
+					
 				</div>
 				<div class="banner_6">
 					<a href="javascript:;"><img src="img/banner6.jpg" alt="" /></a>
@@ -379,7 +383,6 @@
 	(function(){
 		var url = window.location.href;
 		var obj = addres(url);
-		console.log(obj.id)
 		var pid = obj.id;
 		if(pid){
 			$(".denglu").html(pid);

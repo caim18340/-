@@ -8,9 +8,11 @@ body{font:12px "微软雅黑";color:#b7b0b0;}
 .left{float:left;}
 .right{float:right;}
 .clearBoth{clear:both;height:0;overflow:hidden;}
-
-
-
+#aside{
+	position: absolute;
+	top: 160px;
+	left: 5px;
+}
 .main_7{
 	z-index: 20;
 	position: fixed;
@@ -274,9 +276,7 @@ body{font:12px "微软雅黑";color:#b7b0b0;}
 .main_3{
 	width: 1226px;
 	margin: 0 auto;
-	overflow: hidden;
 	height: 420px;
-	position: relative;
 }
 .title_1{
 	height: 80px;
@@ -313,10 +313,8 @@ body{font:12px "微软雅黑";color:#b7b0b0;}
 	height: 339px;
 	border-top: 1px solid #e53935;
 	background: #f1eded;
-	position: absolute;
-	left: 0;
-	top: 80px;
 	z-index: 10;
+	float: left;
 	text-align: center;
 }
 .time_1>h6{
@@ -366,12 +364,19 @@ body{font:12px "微软雅黑";color:#b7b0b0;}
 	text-align: center;
 	line-height: 46px;
 }
+.list_22{
+	position: relative;
+	width: 992px;
+	height: 340px;
+	overflow: hidden;
+	float: left;
+}
 .list_2{
 	position: absolute;
 	width: 5000px;
 	height: 340px;
-	left: 234px;
-	top: 80px;
+	left: 0px;
+	top: 0px;
 }
 .list_2>li{
 	margin-left: 14px;

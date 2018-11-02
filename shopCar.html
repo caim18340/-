@@ -206,6 +206,7 @@
 			var count = 0;
 			var money = 0;
 			$(".ck:checked").each(function(index,item){
+				console.log(item)
 				count += parseInt($(item).parents(".shoplist").find(".shopCount").html());
 				money += parseFloat($(item).parents(".shoplist").find(".allMoney").html())
 			})
